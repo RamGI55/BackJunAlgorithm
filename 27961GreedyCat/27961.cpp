@@ -1,35 +1,21 @@
 #include <iostream> 
-#include <vector> 
-#include <algorithm> 
-#include <cmath>
 
 using namespace std; 
-// 2^n number power + greedy 
+
 int main () 
 { 
-    int c = 0; // current number of the cat
-    int n; // target number of the cat 
-    int s = 0 ; // number of the step 
-
-
-    // + 1  generate 
-
-    // rand(0 to c ) - duplicated. 
-
+    long long c=0, m = 0, n; 
     cin >> n; 
-    
-    while ( n <= c) // set the target number of the cat; 
-    {   
-        if (s == 0 )
-        {
-            c = c+1; 
-            s ++;
-        }// must generate the cat in the very first time
-    
-        else c = 2*c; 
-    // print number of the step. 
-        s++;
+while (n > c)
+{
+    if (c==0)
+    {
+        c++;
     }
-    cout << s; 
-    return 0; 
+    else
+        c*=2;
+    m++;
+}
+    cout << m;
+    return 0;
 }
