@@ -1,29 +1,26 @@
 #include <stdio.h> 
+#define ll long long
 
 int main (void) 
-{ 
-    int c = 0; 
-    int n; 
-    int s = 0; 
-
-    scanf_s("%d", &n);
+{     
+    ll n;
+    scanf_s("%lld", &n);
     
-    if (n == 0)
+    ll c = 1; 
+    ll s = 1; 
+    
+    while (c < n)
     { 
-        s = 0;
-    }
-    while(n> c)
-    { 
-        if (s==0)
-        {
-           c++; 
-        }
-        else
-        { 
-            c*=2;
-        }
+        c <<= 1;
         s++;
+    }    
+     if (n == 0)
+    {
+        printf ("0"); 
     }
-    printf("%d" , s); 
- 
+    else
+    {
+        printf("%lld" , s); 
+        return 0; 
+    }
 }
